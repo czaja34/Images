@@ -13,10 +13,10 @@ public class Main {
     public static void main(String[] args)throws IOException{
 
         String inputFilePath = "C:\\Users\\aleksander\\IdeaProjects\\images\\resources\\file1.tif";
-        String outputFilePath = "C:\\Users\\aleksander\\IdeaProjects\\images\\resources\\file2.tif";
+        String outputFilePath = "C:\\Users\\aleksander\\IdeaProjects\\images\\resources\\file2.bmp";
 
         String inputFilePathGrey = "C:\\Users\\aleksander\\IdeaProjects\\images\\resources\\fileGrey1.tif";
-        String outputFilePathGrey = "C:\\Users\\aleksander\\IdeaProjects\\images\\resources\\fileGrey2.tif";
+        String outputFilePathGrey = "C:\\Users\\aleksander\\IdeaProjects\\images\\resources\\fileGrey2.bmp";
 
         File inputFile =  new File(inputFilePath.replace("\\", "/"));
         File outputFile =  new File(outputFilePath.replace("\\", "/"));

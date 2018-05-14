@@ -25,10 +25,10 @@ public class Main {
         File outputFileGrey =  new File(outputFilePathGrey.replace("\\", "/"));
 
         // Info, jak otwierać i zapisywać pliki
-        BufferedImage testImage;
-        TiffFile test = new TiffFile();
-        testImage = test.readFile(inputFile);
-        test.saveFile(outputFile,testImage);
+//        BufferedImage testImage;
+//        TiffFile test = new TiffFile();
+//        testImage = test.readFile(inputFile);
+//        test.saveFile(outputFile,testImage);
 
         //zad 2
         BufferedImage inzad2;
@@ -36,7 +36,7 @@ public class Main {
         inzad2 = zad2.readFile(inputFileGrey);
 
         Section2 sec2= new Section2();
-        sec2.sumPar(inzad2,150);
+        sec2.sumPar(inzad2,0);
 
         zad2.saveFile(outputFileGrey,inzad2);
 

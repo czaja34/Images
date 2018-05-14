@@ -1,10 +1,10 @@
-package pl.uksw.images.section2;
+package pl.uksw.images.section2.tasks;
 
 import java.awt.image.BufferedImage;
 
-public class Section2 {
+public class Task1 {
 
-    public BufferedImage sumPar(BufferedImage image, int par) {
+    public BufferedImage task1(BufferedImage image, int par) {
         for (int x = 0; x < image.getWidth(); x++) {
             for (int y = 0; y < image.getHeight(); y++) {
                 int pixel = image.getRGB(x, y);
@@ -13,19 +13,24 @@ public class Section2 {
                 int g = (pixel >> 8) & 0xff;
                 int b = pixel & 0xff;
                 ;
-                if (r + par <= 255) {
+                if (r + par <= 255&& r+par>=0) {
                     r += par;
                     g += par;
                     b += par;
-                } else {
+                }else  if (r + par < 0) {
+                    r = 0;
+                    g = 0;
+                    b = 0;
+                } else{
                     r = 255;
                     g = 255;
                     b = 255;
                 }
-                pixel = (a<<24) | (r<<16) | (g<<8) | b;
+                pixel = (a << 24) | (r << 16) | (g << 8) | b;
                 image.setRGB(x, y, pixel);
             }
         }
         return image;
     }
+
 }

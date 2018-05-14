@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Section2Controller {
 
-    public void exercise2(int par) throws IOException {
+    public void exercise1(int par) throws IOException {
         File inputFileGrey = new File("resources/fileGrey1.tif");
         File outputTask1 = new File("resources/outputTask1.bmp");
 

@@ -10,6 +10,6 @@ public class App {
     public static void main(String[] args) throws IOException {
 
         Section2Controller section2Controller = new Section2Controller();
-        section2Controller.exercise1(30);
+        section2Controller.exercise1(100);
     }
 }

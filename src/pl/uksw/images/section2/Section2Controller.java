@@ -11,16 +11,27 @@ public class Section2Controller {
 
     public void exercise1(int par) throws IOException {
         File inputFileGrey = new File("resources/fileGrey1.tif");
-        File outputTask1 = new File("resources/outputTask1.bmp");
+        File outputTask1A = new File("resources/outputTask1A.bmp");
 
-        BufferedImage inputBites;
+        File inputFile1 = new File("resources/kuba.tif");
+        File outputTaskB1 = new File("resources/outputTask1B.bmp");
+
+
+        BufferedImage inputBitesA;
+        BufferedImage inputBitesB;
+
         TiffFile tiffFile = new TiffFile();
 
-        inputBites = tiffFile.readFile(inputFileGrey);
+        inputBitesA = tiffFile.readFile(inputFileGrey);
+        inputBitesB = tiffFile.readFile(inputFile1);
+
 
         Task1 task1 = new Task1();
-        task1.task1(inputBites, par);
-        tiffFile.saveFile(outputTask1, inputBites);
+        task1.task1a(inputBitesA, par);
+        tiffFile.saveFile(outputTask1A, inputBitesA);
+
+
+        tiffFile.saveFile(outputTaskB1, task1.task1b(inputBitesA, inputBitesB));
     }
 
 }

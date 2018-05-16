@@ -13,11 +13,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String inputFilePath = "C:/Users/jakub/IdeaProjects/images/resources/file1.tif";
+        String inputFilePath = "resources/file1.tif";
         String outputFilePath = "C:\\Users\\jakub\\IdeaProjects\\images\\resources\\file2.bmp";
 
-        String inputFilePathGrey = "C:\\Users\\jakub\\IdeaProjects\\images\\resources\\fileGrey1.tif";
-        String outputFilePathGrey = "C:\\Users\\jakub\\IdeaProjects\\images\\resources\\fileGrey2.bmp";
+        String inputFilePathGrey = "resources\\fileGrey1.tif";
+        String outputFilePathGrey = "resources\\fileGrey2.bmp";
 
         File inputFile = new File(inputFilePath.replace("\\", "/"));
         File outputFile = new File(outputFilePath.replace("\\", "/"));
@@ -37,7 +37,7 @@ public class Main {
         inzad2 = zad2.readFile(inputFileGrey);
 
         Section2 sec2 = new Section2();
-        sec2.sumPar(inzad2, 100);
+        sec2.sumPar(inzad2, 20);
 
         zad2.saveFile(outputFileGrey, inzad2);
 

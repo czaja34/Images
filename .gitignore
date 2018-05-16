@@ -74,4 +74,4 @@ fabric.properties
 .idea/httpRequests
 
 resources/
-pl.uksw.images.App
+src/pl/uksw/images/App.java
